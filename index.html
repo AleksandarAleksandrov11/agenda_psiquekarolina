@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar cita | Karolina Cieliczka</title>
+    <meta
+      name="description"
+      content="Reserva tu sesión de psicología online con Karolina Cieliczka. Elige día y hora disponibles directamente en el calendario."
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#FEF5F8" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <img
+          src="logo.png"
+          alt="Psiquekarolina — Karolina Cieliczka, psicóloga"
+          class="logo"
+          width="220"
+          height="48"
+        />
+        <p class="eyebrow">Reserva online</p>
+        <h1 class="title">Agenda tu cita</h1>
+      </header>
+
+      <section class="calendar" aria-label="Calendario de reservas">
+        <div id="calendar-slot" class="calendar__slot"></div>
+      </section>
+
+      <footer class="footer">
+        <nav class="footer__nav" aria-label="Legal">
+          <button type="button" class="footer__link" data-legal-open="dialog-privacy">
+            Política de privacidad
+          </button>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <button type="button" class="footer__link" data-legal-open="dialog-cookies">
+            Política de cookies
+          </button>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <button type="button" class="footer__link" data-legal-open="dialog-legal">
+            Aviso legal
+          </button>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <a class="footer__link footer__link--anchor" href="https://psiquekarolina.com" rel="noopener">
+            psiquekarolina.com
+          </a>
+        </nav>
+      </footer>
+    </main>
+
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" hidden>
+      <div class="cookie-banner__panel">
+        <p class="cookie-banner__eyebrow">Aviso de cookies</p>
+        <p class="cookie-banner__text">
+          Usamos cookies técnicas para recordar tu preferencia. El calendario de reservas
+          utiliza Google Calendar, que puede instalar cookies de terceros si lo aceptas.
+          Puedes aceptar o continuar solo con lo imprescindible.
+        </p>
+        <div class="cookie-banner__actions">
+          <button type="button" id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--primary">
+            Aceptar
+          </button>
+          <button type="button" id="cookie-reject" class="cookie-banner__btn">
+            Solo necesarias
+          </button>
+        </div>
+        <button type="button" class="cookie-banner__policy" data-legal-open="dialog-cookies">
+          Política de cookies
+        </button>
+      </div>
+    </div>
+
+    <dialog id="dialog-privacy" class="legal-dialog">
+      <div class="legal-dialog__panel">
+        <button type="button" class="legal-dialog__close" data-legal-close aria-label="Cerrar">
+          ×
+        </button>
+        <h2 class="legal-dialog__title">Política de privacidad</h2>
+        <p class="legal-dialog__desc">Última actualización: 2026</p>
+        <div class="legal-dialog__body">
+          <section>
+            <h3>Responsable del tratamiento</h3>
+            <p>
+              <strong>Karolina Cieliczka</strong> (Psiquekarolina), psicóloga general sanitaria,
+              colegiada n.º M43234.
+            </p>
+            <p>NIE: Y2790940L. Domicilio: Calle Cuba 10, 5.º C, Fuenlabrada (Madrid).</p>
+            <p>Contacto: <a href="mailto:psiquekarolina@gmail.com">psiquekarolina@gmail.com</a></p>
+          </section>
+          <section>
+            <h3>Finalidad del tratamiento</h3>
+            <p>
+              Tratamos los datos que facilitas al reservar cita online —nombre, correo electrónico
+              y demás información necesaria para la cita— con el fin de gestionar tu reserva,
+              confirmar la sesión y prestarte el servicio de acompañamiento psicológico solicitado.
+            </p>
+          </section>
+          <section>
+            <h3>Legitimación</h3>
+            <p>
+              La base jurídica es tu consentimiento al reservar la cita y la ejecución del
+              servicio profesional contratado.
+            </p>
+          </section>
+          <section>
+            <h3>Conservación</h3>
+            <p>
+              Conservaremos tus datos durante el tiempo necesario para gestionar la reserva y,
+              posteriormente, durante los plazos legales aplicables a las obligaciones derivadas
+              de la relación profesional.
+            </p>
+          </section>
+          <section>
+            <h3>Destinatarios</h3>
+            <p>
+              No cedemos tus datos a terceros, salvo obligación legal. La reserva se gestiona a
+              través de Google Calendar Appointment Scheduling (Google LLC), que actúa como
+              encargado del tratamiento para facilitar la agenda online.
+            </p>
+          </section>
+          <section>
+            <h3>Tus derechos</h3>
+            <p>
+              Puedes ejercer en cualquier momento tus derechos de acceso, rectificación,
+              supresión, oposición, limitación del tratamiento y portabilidad escribiendo a
+              <a href="mailto:psiquekarolina@gmail.com">psiquekarolina@gmail.com</a>.
+            </p>
+            <p>
+              También tienes derecho a presentar una reclamación ante la Agencia Española de
+              Protección de Datos (<a href="https://www.aepd.es" rel="noopener">www.aepd.es</a>)
+              si consideras que el tratamiento de tus datos no se ajusta a la normativa vigente.
+            </p>
+          </section>
+          <section>
+            <h3>Confidencialidad</h3>
+            <p>
+              La actividad terapéutica está sujeta al secreto profesional y al Código Deontológico
+              del Colegio Oficial de la Psicología.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="dialog-cookies" class="legal-dialog">
+      <div class="legal-dialog__panel">
+        <button type="button" class="legal-dialog__close" data-legal-close aria-label="Cerrar">
+          ×
+        </button>
+        <h2 class="legal-dialog__title">Política de cookies</h2>
+        <p class="legal-dialog__desc">
+          Información sobre las cookies y servicios de terceros usados en esta web.
+        </p>
+        <div class="legal-dialog__body">
+          <section>
+            <h3>¿Qué son las cookies?</h3>
+            <p>
+              Las cookies son pequeños archivos que un sitio web guarda en tu dispositivo para
+              recordar información sobre tu visita. Esta página usa cookies técnicas y, si das tu
+              consentimiento, el calendario embebido de Google.
+            </p>
+          </section>
+          <section>
+            <h3>Cookies y servicios que utilizamos</h3>
+            <p>
+              <strong>Técnicas (siempre activas):</strong> guardan tu preferencia de consentimiento
+              en el navegador para no volver a mostrarte el aviso.
+            </p>
+            <p>
+              <strong>Google Calendar (solo si aceptas):</strong> el calendario de reservas está
+              integrado mediante Google Calendar Appointment Scheduling. Google puede instalar
+              cookies de terceros al cargar o usar el calendario.
+            </p>
+            <p>
+              <strong>Google Fonts:</strong> las tipografías se cargan desde servidores de Google,
+              lo que puede implicar una transferencia de datos (como tu dirección IP) a Google.
+            </p>
+          </section>
+          <section>
+            <h3>Gestionar tu consentimiento</h3>
+            <p>Tu preferencia actual: <span id="consent-status">pendiente</span>.</p>
+            <p>
+              Puedes cambiar tu elección borrando los datos del sitio en tu navegador o
+              aceptando el calendario desde el aviso de cookies.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="dialog-legal" class="legal-dialog">
+      <div class="legal-dialog__panel">
+        <button type="button" class="legal-dialog__close" data-legal-close aria-label="Cerrar">
+          ×
+        </button>
+        <h2 class="legal-dialog__title">Aviso legal</h2>
+        <p class="legal-dialog__desc">Información legal sobre el titular del sitio web.</p>
+        <div class="legal-dialog__body">
+          <section>
+            <h3>Titular</h3>
+            <p><strong>Karolina Cieliczka</strong> (Psiquekarolina).</p>
+            <p>Psicóloga general sanitaria. Colegiada n.º M43234.</p>
+            <p>NIE: Y2790940L. Domicilio: Calle Cuba 10, 5.º C, Fuenlabrada (Madrid).</p>
+            <p>
+              Sitio web:
+              <a href="https://psiquekarolina.com" rel="noopener">psiquekarolina.com</a>
+            </p>
+            <p>
+              Email: <a href="mailto:psiquekarolina@gmail.com">psiquekarolina@gmail.com</a>
+              · WhatsApp: <a href="https://wa.me/34722672032" rel="noopener">+34 722 672 032</a>
+            </p>
+          </section>
+          <section>
+            <h3>Objeto</h3>
+            <p>
+              Esta página (<strong>agenda.psiquekarolina.com</strong>) tiene como finalidad
+              facilitar la reserva online de citas con la titular. No constituye, en ningún caso,
+              asesoramiento clínico ni sustituye una sesión terapéutica.
+            </p>
+          </section>
+          <section>
+            <h3>Propiedad intelectual</h3>
+            <p>
+              Los textos, imágenes, marca, logotipo y demás contenidos son propiedad de su titular
+              o se utilizan con la debida autorización. No está permitida su reproducción sin
+              consentimiento expreso.
+            </p>
+          </section>
+          <section>
+            <h3>Legislación aplicable</h3>
+            <p>
+              La relación entre la titular y los usuarios se regirá por la normativa española
+              vigente. Las controversias se someterán a los juzgados y tribunales del domicilio
+              del titular.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
