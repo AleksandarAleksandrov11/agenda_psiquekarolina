@@ -179,6 +179,12 @@ body {
   font-size: 0.8125rem;
 }
 
+.footer__credit {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+}
+
 .cookie-banner {
   position: fixed;
   inset: auto 1rem 1rem;
